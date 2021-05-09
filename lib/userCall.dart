@@ -44,13 +44,24 @@ class _UserCallState extends State<UserCall> {
             Stack(
               alignment: Alignment.bottomCenter,
               children: [
-                ClipPath(
+                // ClipPath(
+                //   child: Image.asset(
+                //     "./assets/img.jpg",
+                //     fit: BoxFit.cover,
+                //     height: 600,
+                //   ),
+                //   clipper: BottomWaveClipper(),
+                // ),
+                ClipRRect(
                   child: Image.asset(
                     "./assets/img.jpg",
                     fit: BoxFit.cover,
-                    height: 600,
+                    height: 550,
                   ),
-                  clipper: BottomWaveClipper(),
+                  borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(30),
+                    bottomRight: Radius.circular(30),
+                  ),
                 ),
                 Positioned(
                   bottom: 70,
@@ -63,6 +74,9 @@ class _UserCallState extends State<UserCall> {
                 ),
               ],
             ),
+            SizedBox(
+              height: 20,
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
@@ -72,7 +86,7 @@ class _UserCallState extends State<UserCall> {
                     borderRadius: BorderRadius.all(
                       Radius.circular(100),
                     ),
-                    border: Border.all(color: Colors.black, width: 2),
+                    border: Border.all(color: Colors.blueAccent, width: 3),
                   ),
                   child: IconButton(
                     icon: Icon(Icons.campaign),
@@ -85,7 +99,7 @@ class _UserCallState extends State<UserCall> {
                         }
                       });
                     },
-                    color: Colors.black,
+                    color: Colors.blueAccent,
                   ),
                 ),
                 Container(
@@ -93,7 +107,7 @@ class _UserCallState extends State<UserCall> {
                     borderRadius: BorderRadius.all(
                       Radius.circular(100),
                     ),
-                    border: Border.all(color: Colors.red, width: 2),
+                    border: Border.all(color: Colors.red, width: 3),
                   ),
                   child: IconButton(
                     icon: Icon(Icons.call_end_sharp),
@@ -107,7 +121,7 @@ class _UserCallState extends State<UserCall> {
                     borderRadius: BorderRadius.all(
                       Radius.circular(100),
                     ),
-                    border: Border.all(color: Colors.black, width: 2),
+                    border: Border.all(color: Colors.blueAccent, width: 3),
                   ),
                   child: IconButton(
                     icon: Icon(isMuted ? Icons.mic_off : Icons.mic),
@@ -120,7 +134,7 @@ class _UserCallState extends State<UserCall> {
                         }
                       });
                     },
-                    color: Colors.black,
+                    color: Colors.blueAccent,
                   ),
                 ),
               ],
