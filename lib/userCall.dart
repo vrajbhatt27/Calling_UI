@@ -18,7 +18,7 @@ class _UserCallState extends State<UserCall> {
   void initState() {
     super.initState();
     // ToDO: Add caller name here
-    text = 'Calling tony';
+    text = 'Calling Natasha';
     Timer.periodic(Duration(seconds: 1), (timer) {
       effect(t);
       t = (t + 1) % 4;
@@ -53,10 +53,13 @@ class _UserCallState extends State<UserCall> {
                 //   clipper: BottomWaveClipper(),
                 // ),
                 ClipRRect(
-                  child: Image.asset(
-                    "./assets/img.jpg",
-                    fit: BoxFit.cover,
-                    height: 550,
+                  child: Opacity(
+										opacity: 0.7,
+                    child: Image.asset(
+                      "./assets/doctor.jpg",
+                      fit: BoxFit.cover,
+                      height: 550,
+                    ),
                   ),
                   borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(30),
@@ -68,7 +71,7 @@ class _UserCallState extends State<UserCall> {
                   child: Center(
                     child: Text(
                       text + dot,
-                      style: TextStyle(color: Colors.white, fontSize: 30),
+                      style: TextStyle(color: Colors.blue[900], fontSize: 30),
                     ),
                   ),
                 ),
@@ -86,7 +89,7 @@ class _UserCallState extends State<UserCall> {
                     borderRadius: BorderRadius.all(
                       Radius.circular(100),
                     ),
-                    border: Border.all(color: Colors.blueAccent, width: 3),
+                    border: Border.all(color: Colors.blue[900], width: 3),
                   ),
                   child: IconButton(
                     icon: Icon(Icons.campaign),
@@ -99,7 +102,7 @@ class _UserCallState extends State<UserCall> {
                         }
                       });
                     },
-                    color: Colors.blueAccent,
+                    color: Colors.blue[900],
                   ),
                 ),
                 Container(
@@ -121,7 +124,7 @@ class _UserCallState extends State<UserCall> {
                     borderRadius: BorderRadius.all(
                       Radius.circular(100),
                     ),
-                    border: Border.all(color: Colors.blueAccent, width: 3),
+                    border: Border.all(color: Colors.blue[900], width: 3),
                   ),
                   child: IconButton(
                     icon: Icon(isMuted ? Icons.mic_off : Icons.mic),
@@ -134,7 +137,7 @@ class _UserCallState extends State<UserCall> {
                         }
                       });
                     },
-                    color: Colors.blueAccent,
+                    color: Colors.blue[900],
                   ),
                 ),
               ],
