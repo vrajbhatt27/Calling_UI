@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
 import 'package:flutter_icons/flutter_icons.dart';
-import 'package:animated_widgets/animated_widgets.dart';
 
-class IncomingAudioCall extends StatefulWidget {
+
+class IncomingVideoCall extends StatefulWidget {
   @override
-  _IncomingAudioCallState createState() => _IncomingAudioCallState();
+  _IncomingVideoCallState createState() => _IncomingVideoCallState();
 }
 
-class _IncomingAudioCallState extends State<IncomingAudioCall> {
+class _IncomingVideoCallState extends State<IncomingVideoCall> {
   var isMuted = false;
   var isSpeaker = false;
 
@@ -111,12 +111,7 @@ class _IncomingAudioCallState extends State<IncomingAudioCall> {
           SizedBox(
             height: 50,
           ),
-          ShakeAnimatedWidget(
-            enabled: true,
-            duration: Duration(milliseconds: 1500),
-            shakeAngle: Rotation.deg(z: 40),
-            curve: Curves.linear,
-            child: Draggable(
+          Draggable(
               axis: Axis.vertical,
               child: dragOver
                   ? Container(
@@ -132,7 +127,7 @@ class _IncomingAudioCallState extends State<IncomingAudioCall> {
               //   print('Completed');
               // },
             ),
-          ),
+          
           SizedBox(
             height: 75,
           ),
@@ -193,7 +188,7 @@ class Phone extends StatelessWidget {
             color: color,
           ),
           child: IconButton(
-            icon: Icon(Icons.call),
+            icon: Icon(MaterialCommunityIcons.video),
             onPressed: () {},
             color: btnColor,
           ),
