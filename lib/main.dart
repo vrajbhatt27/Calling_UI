@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: OutgoingVideoCall(), 
+      home: IncomingAudioCall(), 
       debugShowCheckedModeBanner: false,
     );
   }
