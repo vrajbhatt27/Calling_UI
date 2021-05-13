@@ -96,6 +96,7 @@ class _VideoScreenOneState extends State<VideoScreenOne> {
         constraints: BoxConstraints.expand(),
         decoration: BoxDecoration(
           image: DecorationImage(
+						// Todo: add the expert image here-------------------------------------------
             image: NetworkImage(
               'https://www.cdc.gov/diabetes/images/library/spotlights/Male-doctor-smiling-portrait-close-up-Med-Res-72991363.jpg',
             ),
@@ -140,6 +141,7 @@ class _VideoScreenOneState extends State<VideoScreenOne> {
                       // color: Colors.teal[100],
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.all(Radius.circular(10)),
+												// Todo: add the user image here.----------------------------
                         image: DecorationImage(
                           image: AssetImage("assets/person.jpg"),
                           fit: BoxFit.cover,
@@ -168,6 +170,7 @@ class _VideoScreenOneState extends State<VideoScreenOne> {
                                   soundIconColor = Colors.black;
                                 }
                               });
+															// Todo: add the speaker on/off icon here.-----------------
                             },
                             color: buttonBackgroundColor
                                 .withOpacity(soundIconOpacity),
@@ -193,6 +196,7 @@ class _VideoScreenOneState extends State<VideoScreenOne> {
                                   videoIconColor = Colors.black;
                                 }
                               });
+															// Todo: add the video on/off here
                             },
                             color: buttonBackgroundColor
                                 .withOpacity(videoIconOpacity),
@@ -218,6 +222,7 @@ class _VideoScreenOneState extends State<VideoScreenOne> {
                                   micIconColor = Colors.black;
                                 }
                               });
+															// todo: add the mic on/off here.-------------------
                             },
                             color: buttonBackgroundColor
                                 .withOpacity(micIconOpacity),

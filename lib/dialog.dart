@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'dart:ui';
 import 'package:smooth_star_rating/smooth_star_rating.dart';
 
-
 class ReviewDialog extends StatefulWidget {
   @override
   ReviewDialogState createState() => ReviewDialogState();
@@ -10,7 +9,7 @@ class ReviewDialog extends StatefulWidget {
 
 class ReviewDialogState extends State<ReviewDialog> {
   bool review = false;
-	var rating = 0.0;
+  var rating = 0.0;
 
   @override
   Widget build(BuildContext context) {

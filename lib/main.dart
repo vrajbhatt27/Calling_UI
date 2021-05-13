@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'out_audio.dart';
-import 'int_audio.dart';
+import 'outgoing_audio_call_screen.dart';
+import 'internal_audio_call_screen.dart';
 import 'incoming_audio.dart';
 import './incoming_video_call.dart';
-import './out_video.dart';
-import './videoScreenOne.dart';
+import './outgoing_video_call_screen.dart';
+import './internal_video_call_screen.dart';
 
 
 void main() {

@@ -19,7 +19,7 @@ class _InternalAudioCallState extends State<InternalAudioCall> {
   @override
   void initState() {
     super.initState();
-    // ToDO: Add caller name here
+    // ToDO: Add caller name here-------------------------------------------------
     text = 'Dr. Natasha';
     startTimer();
   }
@@ -92,6 +92,7 @@ class _InternalAudioCallState extends State<InternalAudioCall> {
                 child: Container(
                   height: 150,
                   width: 150,
+									// Todo: Add the profile pic of expert here---------------------------
                   child: Image.asset(
                     "./assets/doctor.jpg",
                     fit: BoxFit.cover,
@@ -138,6 +139,7 @@ class _InternalAudioCallState extends State<InternalAudioCall> {
                               isSpeaker = true;
                             }
                           });
+													// TODO: Add The speaker on/off functionality here.----------
                         },
                         color: isSpeaker ? Colors.black : Colors.white,
                       ),
@@ -172,6 +174,8 @@ class _InternalAudioCallState extends State<InternalAudioCall> {
                               isMuted = true;
                             }
                           });
+
+													// TODO: Add The mute on/off functionality here.-------------
                         },
                         color: isMuted ? Colors.black : Colors.white,
                       ),
@@ -196,7 +200,9 @@ class _InternalAudioCallState extends State<InternalAudioCall> {
                       ),
                       child: IconButton(
                         icon: Icon(Icons.call_end_sharp),
-                        onPressed: () {},
+                        onPressed: () {
+													// TODO: Add the end call functionality here.--------------------
+												},
                         color: Colors.white,
                       ),
                     ),

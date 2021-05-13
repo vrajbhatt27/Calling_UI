@@ -1,13 +1,14 @@
+// This file is for outgoing audio file at user side.
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'dart:async';
 
-class OutgoingVideoCall extends StatefulWidget {
+class OutgoingAudioCall extends StatefulWidget {
   @override
-  _OutgoingVideoCallState createState() => _OutgoingVideoCallState();
+  _OutgoingAudioCallState createState() => _OutgoingAudioCallState();
 }
 
-class _OutgoingVideoCallState extends State<OutgoingVideoCall> {
+class _OutgoingAudioCallState extends State<OutgoingAudioCall> {
   var isMuted = false;
   var isSpeaker = false;
   var isVideoCall = false;
@@ -19,7 +20,7 @@ class _OutgoingVideoCallState extends State<OutgoingVideoCall> {
   @override
   void initState() {
     super.initState();
-    // ToDO: Add caller name here
+    // ToDO: Add expert name here----------------------------------------------------------
     text = 'Dr. Natasha';
     Timer.periodic(Duration(seconds: 1), (timer) {
       effect(t);
@@ -64,6 +65,7 @@ class _OutgoingVideoCallState extends State<OutgoingVideoCall> {
                 child: Container(
                   height: 150,
                   width: 150,
+									// Todo: Add Expert profile image here.--------------------------
                   child: Image.asset(
                     "./assets/doctor.jpg",
                     fit: BoxFit.cover,
@@ -110,6 +112,7 @@ class _OutgoingVideoCallState extends State<OutgoingVideoCall> {
                               isSpeaker = true;
                             }
                           });
+													// Todo: Add the speaker on/off functionality here.------------
                         },
                         color: isSpeaker ? Colors.black : Colors.white,
                       ),
@@ -147,6 +150,7 @@ class _OutgoingVideoCallState extends State<OutgoingVideoCall> {
                               isVideoCall = true;
                             }
                           });
+													// Todo: Add the switch to video call functionality here.------
                         },
                         color: isVideoCall ? Colors.black : Colors.white,
                       ),
@@ -155,7 +159,7 @@ class _OutgoingVideoCallState extends State<OutgoingVideoCall> {
                       height: 10,
                     ),
                     Text(
-                      isVideoCall?'video Off':'Video On',
+                      'video call',
                       style: TextStyle(color: Colors.white),
                     ),
                   ],
@@ -181,6 +185,7 @@ class _OutgoingVideoCallState extends State<OutgoingVideoCall> {
                               isMuted = true;
                             }
                           });
+													// Todo: add the mute on/off functionality here.------------
                         },
                         color: isMuted ? Colors.black : Colors.white,
                       ),
@@ -205,7 +210,9 @@ class _OutgoingVideoCallState extends State<OutgoingVideoCall> {
                       ),
                       child: IconButton(
                         icon: Icon(Icons.call_end_sharp),
-                        onPressed: () {},
+                        onPressed: () {
+													// Todo: add the end call fucntionality here------------------
+												},
                         color: Colors.white,
                       ),
                     ),

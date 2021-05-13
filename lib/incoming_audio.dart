@@ -1,3 +1,4 @@
+// THis file is for incoming audio call at expert side.
 import 'package:flutter/material.dart';
 import 'dart:async';
 import 'package:flutter_icons/flutter_icons.dart';
@@ -25,7 +26,7 @@ class _IncomingAudioCallState extends State<IncomingAudioCall> {
   @override
   void initState() {
     super.initState();
-    // ToDO: Add caller name here
+    // ToDO: Add caller name here ----------------------------------------------
     text = 'Tony Stark Calling';
     Timer.periodic(Duration(seconds: 1), (timer) {
       effect(t);
@@ -57,6 +58,7 @@ class _IncomingAudioCallState extends State<IncomingAudioCall> {
             radius: 70,
             backgroundColor: Color(0xffFFFFFF).withOpacity(0.33),
             child: Text(
+              // TODO: Add the First Letter of Name and Surname here ------------------
               'TS',
               style: TextStyle(
                 color: Colors.white,
@@ -105,7 +107,8 @@ class _IncomingAudioCallState extends State<IncomingAudioCall> {
                 h = null;
                 w = null;
               });
-              print('Call End');
+              print('Call Rejected');
+              // TODO: Add the functionality of call Rejected Here.---------------------
             },
           ),
           SizedBox(
@@ -167,6 +170,7 @@ class _IncomingAudioCallState extends State<IncomingAudioCall> {
                 w = null;
               });
               print('Call Picked');
+              // TODO: Add the functionality of call Accepted Here.------------------------
             },
           ),
         ],
@@ -186,8 +190,8 @@ class Phone extends StatelessWidget {
       borderRadius: BorderRadius.circular(100),
       child: Material(
         child: Container(
-					height: 60,
-					width: 60,
+          height: 60,
+          width: 60,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.all(
               Radius.circular(100),

@@ -1,3 +1,5 @@
+// THis file is for incoming Video call at expert side.
+
 import 'package:flutter/material.dart';
 import 'dart:async';
 import 'package:flutter_icons/flutter_icons.dart';
@@ -25,7 +27,7 @@ class _IncomingVideoCallState extends State<IncomingVideoCall> {
   @override
   void initState() {
     super.initState();
-    // ToDO: Add caller name here
+    // ToDO: Add caller name here ---------------------------------------------------
     text = 'Tony Stark Calling';
     Timer.periodic(Duration(seconds: 1), (timer) {
       effect(t);
@@ -57,6 +59,7 @@ class _IncomingVideoCallState extends State<IncomingVideoCall> {
             radius: 70,
             backgroundColor: Color(0xffFFFFFF).withOpacity(0.33),
             child: Text(
+							// TODO: Add the First Letter of Name and Surname here ------------------
               'TS',
               style: TextStyle(
                 color: Colors.white,
@@ -105,7 +108,8 @@ class _IncomingVideoCallState extends State<IncomingVideoCall> {
                 h = null;
                 w = null;
               });
-              print('Call End');
+              print('Call Rejected');
+							// TODO: Add the functionality of call Rejected Here.---------------------
             },
           ),
           SizedBox(
@@ -161,7 +165,8 @@ class _IncomingVideoCallState extends State<IncomingVideoCall> {
                 h = null;
                 w = null;
               });
-              print('Call End');
+              print('Call Picked');
+							// TODO: Add the functionality of call Accepted Here.------------------------
             },
           ),
         ],
