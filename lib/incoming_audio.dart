@@ -73,7 +73,7 @@ class _IncomingAudioCallState extends State<IncomingAudioCall> {
             style: TextStyle(color: Colors.white, fontSize: 25),
           ),
           SizedBox(
-            height: 40,
+            height: 60,
           ),
           DragTarget(
             builder: (context, candidateData, rejectedData) {
@@ -87,7 +87,7 @@ class _IncomingAudioCallState extends State<IncomingAudioCall> {
                           Icon(
                             SimpleLineIcons.arrow_up,
                             color: Colors.red,
-                            size: 30,
+                            size: 20,
                           ),
                           Icon(
                             SimpleLineIcons.arrow_up,
@@ -109,7 +109,7 @@ class _IncomingAudioCallState extends State<IncomingAudioCall> {
             },
           ),
           SizedBox(
-            height: 50,
+            height: 30,
           ),
           ShakeAnimatedWidget(
             enabled: true,
@@ -134,7 +134,7 @@ class _IncomingAudioCallState extends State<IncomingAudioCall> {
             ),
           ),
           SizedBox(
-            height: 75,
+            height: 60,
           ),
           DragTarget(
             builder: (context, candidateData, rejectedData) {
@@ -153,7 +153,7 @@ class _IncomingAudioCallState extends State<IncomingAudioCall> {
                           Icon(
                             SimpleLineIcons.arrow_down,
                             color: Colors.green,
-                            size: 30,
+                            size: 20,
                           ),
                         ],
                       ),
@@ -186,6 +186,8 @@ class Phone extends StatelessWidget {
       borderRadius: BorderRadius.circular(100),
       child: Material(
         child: Container(
+					height: 60,
+					width: 60,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.all(
               Radius.circular(100),
